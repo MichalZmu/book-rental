@@ -1,4 +1,4 @@
-package com.luv2code.bookrental.dao;
+package com.bookrental.dao;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,8 +11,8 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.luv2code.bookrental.entity.Book;
-import com.luv2code.bookrental.entity.Client;
+import com.bookrental.entity.Book;
+import com.bookrental.entity.Client;
 
 @Repository
 public class BookDAOImpl implements BookDAO {

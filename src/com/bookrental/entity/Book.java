@@ -1,4 +1,4 @@
-package com.luv2code.bookrental.entity;
+package com.bookrental.entity;
 
 import java.io.Serializable;
 import java.lang.annotation.ElementType;

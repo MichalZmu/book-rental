@@ -1,9 +1,9 @@
-package com.luv2code.bookrental.dao;
+package com.bookrental.dao;
 
 import java.util.List;
 
-import com.luv2code.bookrental.entity.Book;
-import com.luv2code.bookrental.entity.Client;
+import com.bookrental.entity.Book;
+import com.bookrental.entity.Client;
 
 public interface ClientDAO {
 	

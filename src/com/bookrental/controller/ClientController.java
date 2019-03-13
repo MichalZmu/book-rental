@@ -1,4 +1,4 @@
-package com.luv2code.bookrental.controller;
+package com.bookrental.controller;
 
 import java.util.List;
 
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.luv2code.bookrental.entity.Book;
-import com.luv2code.bookrental.entity.Client;
-import com.luv2code.bookrental.service.BookAndClientService;
+import com.bookrental.entity.Book;
+import com.bookrental.entity.Client;
+import com.bookrental.service.BookAndClientService;
 
 @Controller
 @RequestMapping("/client")

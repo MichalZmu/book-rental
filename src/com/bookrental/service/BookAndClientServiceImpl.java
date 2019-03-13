@@ -1,4 +1,4 @@
-package com.luv2code.bookrental.service;
+package com.bookrental.service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.luv2code.bookrental.dao.BookDAO;
-import com.luv2code.bookrental.dao.ClientDAO;
-import com.luv2code.bookrental.entity.Book;
-import com.luv2code.bookrental.entity.Client;
+import com.bookrental.dao.BookDAO;
+import com.bookrental.dao.ClientDAO;
+import com.bookrental.entity.Book;
+import com.bookrental.entity.Client;
 
 @Service
 public class BookAndClientServiceImpl implements BookAndClientService {
