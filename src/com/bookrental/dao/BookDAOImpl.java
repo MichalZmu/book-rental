@@ -60,12 +60,6 @@ public class BookDAOImpl implements BookDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//Book theBook = currentSession.get(Book.class, theBookId);
-		//Client theClient = currentSession.get(Client.class, theClientId);
-		
-		System.out.println("this is book in DAO: " + theBook);
-		System.out.println("this is client in DAO: " + theClient);
-		
 		theBook.setClient(theClient);
 		
 		currentSession.update(theBook);
@@ -89,10 +83,7 @@ public class BookDAOImpl implements BookDAO {
 	public void updateBook(Book theBook) {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
-		
-		System.out.println("Starting updating...");
-		System.out.println("This is theBook in DAO: " + theBook);
-		
+				
 		currentSession.update(theBook);
 		
 	}
@@ -119,10 +110,6 @@ public class BookDAOImpl implements BookDAO {
 	        
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//Book theBook = currentSession.get(Book.class, theId);
-		//theBook.setRentalDate(null);
-		//theBook.setReturnDate(null);
-		//theBook.setClient(null);
 		
 		Query myQuery = currentSession.createQuery("update Book set returnDate=null, rentalDate=null, client=null where idBook= :bookId");
 		myQuery.setParameter("bookId", theId);
