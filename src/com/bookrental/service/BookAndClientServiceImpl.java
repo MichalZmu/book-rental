@@ -109,5 +109,12 @@ public class BookAndClientServiceImpl implements BookAndClientService {
 		bookDAO.returnBook(theId);
 	}
 	
+	@Override
+	@Transactional
+	public boolean checkIfUserHasBook(int theId) {
+		
+		return clientDAO.checkIfUserHasBook(theId);
+	}
+	
 	
 }

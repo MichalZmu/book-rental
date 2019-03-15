@@ -50,7 +50,7 @@ public class ClientDAOImpl implements ClientDAO {
 	public void deleteClient(int theId) {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
-				
+								
 		Query myQuery = currentSession.createQuery("delete from Client where idClient= :clientId");
 		
 		myQuery.setParameter("clientId", theId);
@@ -58,5 +58,27 @@ public class ClientDAOImpl implements ClientDAO {
 		myQuery.executeUpdate();
 		
 	}
+	
+	@Override
+	public boolean checkIfUserHasBook(int theId) {
+	        
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Query myQuery = currentSession.createQuery("select idBook from Book where client_id= :clinetId");
+		myQuery.setParameter("clinetId", theId);
+		//myQuery.executeUpdate();
+		
+		List<Object[]> resultList = myQuery.getResultList();
+		
+		if(resultList.isEmpty()) {
+			return false;
+		}
+		else {
+			return true;
+		}
+		
+		
+	        
+	 }
 
 }

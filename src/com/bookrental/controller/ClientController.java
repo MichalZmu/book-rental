@@ -33,7 +33,7 @@ import com.bookrental.service.BookAndClientService;
 public class ClientController {
 	
 	@Autowired
-	private BookAndClientService bookService;
+	private BookAndClientService bkService;
 	
 	@InitBinder
 	public void initBinder(WebDataBinder dataBinder) {
@@ -41,30 +41,7 @@ public class ClientController {
 		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 	
-	@ControllerAdvice
-	class GlobalDefaultExceptionHandler {
-	  public static final String DEFAULT_ERROR_VIEW = "error";
-
-	  @ExceptionHandler(value = Exception.class)
-	  public String
-	  defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-	    // If the exception is annotated with @ResponseStatus rethrow it and let
-	    // the framework handle it - like the OrderNotFoundException example
-	    // at the start of this post.
-	    // AnnotationUtils is a Spring Framework utility class.
-	    if (AnnotationUtils.findAnnotation
-	                (e.getClass(), ResponseStatus.class) != null)
-	      throw e;
-
-	    // Otherwise setup and send the user to a default error-view.
-	    ModelAndView mav = new ModelAndView();
-	    mav.addObject("exception", e);
-	    mav.addObject("url", req.getRequestURL());
-	    mav.setViewName(DEFAULT_ERROR_VIEW);
-	    return "home-page";
-	  }
-	}
-	
+		
 	@GetMapping("/")
 	public String showHomePage() {
 		
@@ -74,7 +51,7 @@ public class ClientController {
 	@GetMapping("/list-clients")
 	public String listClients(Model theModel) {
 		
-		List<Client> theClients = bookService.getClients();
+		List<Client> theClients = bkService.getClients();
 		
 		theModel.addAttribute("clients", theClients);
 		
@@ -99,7 +76,7 @@ public class ClientController {
 			return "client-form";
 		}
 		else {
-			bookService.saveClient(theClient);
+			bkService.saveClient(theClient);
 			return "redirect:/client/list-clients";
 		}
 		
@@ -109,7 +86,7 @@ public class ClientController {
 	@GetMapping("/showFormForUpdateClient")
 	public String showFormForUpdateClient(@RequestParam("clientId") int theId, Model theModel) {
 		
-		Client theClient = bookService.getClient(theId);
+		Client theClient = bkService.getClient(theId);
 		
 		theModel.addAttribute("client", theClient);
 		
@@ -120,14 +97,16 @@ public class ClientController {
 	@GetMapping("/deleteClient")
 	public String deleteClient(@RequestParam("clientId") int theId) {
 		
-		try {
-			bookService.deleteClient(theId);
+		if(bkService.checkIfUserHasBook(theId)){
+			return "error-still-in-use";
 		}
-		catch (Exception e) {
-			
+		else {
+			bkService.deleteClient(theId);
+			return "redirect:/client/list-clients";
 		}
 		
-				
-		return "redirect:/client/list-clients";
+		
 	}
+	
+	
 }

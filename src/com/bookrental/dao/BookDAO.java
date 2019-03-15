@@ -22,5 +22,7 @@ public interface BookDAO {
 	public void deleteBook(int theId);
 
 	void returnBook(int theId);
+
+	boolean checkIfRented(int theId);
 	
 }

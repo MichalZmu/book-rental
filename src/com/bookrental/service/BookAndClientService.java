@@ -26,4 +26,5 @@ public interface BookAndClientService {
 	
 	public void returnBook(int theId);
 	void deleteClient(int theId);
+	boolean checkIfUserHasBook(int theId);
 }

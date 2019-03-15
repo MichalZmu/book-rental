@@ -15,4 +15,6 @@ public interface ClientDAO {
 
 	void deleteClient(int theId);
 
+	boolean checkIfUserHasBook(int theId);
+
 }

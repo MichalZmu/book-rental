@@ -116,5 +116,27 @@ public class BookDAOImpl implements BookDAO {
 		myQuery.executeUpdate();
 	        
 	 }
+	
+	@Override
+	public boolean checkIfRented(int theId) {
+	        
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Query myQuery = currentSession.createQuery("select idBook from Book where client= :clinetId");
+		myQuery.setParameter("clinetId", theId);
+		//myQuery.executeUpdate();
+		
+		List<Object[]> resultList = myQuery.getResultList();
+		
+		if(resultList.isEmpty()) {
+			return false;
+		}
+		else {
+			return true;
+		}
+		
+		
+	        
+	 }
 
 }
