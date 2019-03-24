@@ -1,2 +1,2 @@
-# book-rental-2
+# book-rental
 Librar System Java Project with Spring and Hibernate. 
