@@ -1,0 +1,11 @@
+com\bookrental\service\BookAndClientService.class
+com\bookrental\entity\Client.class
+com\bookrental\entity\Book.class
+com\bookrental\dao\ClientDAOImpl.class
+com\bookrental\controller\BookController.class
+com\bookrental\dao\BookDAO.class
+com\bookrental\dao\ClientDAO.class
+com\bookrental\dao\BookDAOImpl.class
+com\bookrental\jdbcTest\TestJdbc.class
+com\bookrental\controller\ClientController.class
+com\bookrental\service\BookAndClientServiceImpl.class

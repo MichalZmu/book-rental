@@ -19,7 +19,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
-@Table(name="client")
+@Table(name="Client")
 @DynamicUpdate(true)
 public class Client {
 	
@@ -55,15 +55,6 @@ public class Client {
 		this.lastName = lastName;
 		this.email = email;
 	}
-
-
-	/*public Book getBookDetail() {
-		return bookDetail;
-	}
-
-	public void setBookDetail(Book bookDetail) {
-		this.bookDetail = bookDetail;
-	}*/
 
 	public int getIdClient() {
 		return idClient;

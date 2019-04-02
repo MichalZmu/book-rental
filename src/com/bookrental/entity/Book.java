@@ -22,7 +22,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
-@Table(name="book")
+@Table(name="Book")
 @org.hibernate.annotations.Entity(dynamicUpdate = true, selectBeforeUpdate = true)
 public class Book {
 	
