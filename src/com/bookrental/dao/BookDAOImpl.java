@@ -23,17 +23,11 @@ public class BookDAOImpl implements BookDAO {
 	@Override
 	public List<Book> getBooks() {
 		
-		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
+		List<Book> books = currentSession.createQuery("from Book").list();
 		
-		//Query<Book> theQuery = currentSession.createQuery("from Book", Book.class);
-		List<Book> books = (List<Book>) currentSession.createQuery("from Book").list();
-
-		//List<Book> books = theQuery.getResultList();
-		
-		return books;
-		
+		return books;		
 	}
 
 	@Override
@@ -124,7 +118,6 @@ public class BookDAOImpl implements BookDAO {
 		
 		Query myQuery = currentSession.createQuery("select idBook from Book where client= :clinetId");
 		myQuery.setParameter("clinetId", theId);
-		//myQuery.executeUpdate();
 		
 		List<Object[]> resultList = myQuery.getResultList();
 		

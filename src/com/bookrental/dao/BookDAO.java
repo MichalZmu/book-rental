@@ -8,18 +8,18 @@ import com.bookrental.entity.Client;
 
 public interface BookDAO {
 	
-	public List<Book> getBooks();
+	List<Book> getBooks();
 	
-	public void saveBook(Book theBook);
+	void saveBook(Book theBook);
 	
-	public void updateBook(Book theBook);
-	public void updateBook(int idBook, String author, String title, String genre, String rentalDate, String returnDate);
+	void updateBook(Book theBook);
+	void updateBook(int idBook, String author, String title, String genre, String rentalDate, String returnDate);
 	
-	public Book getBook(int theId);
+	Book getBook(int theId);
 	
-	public void rentBook(Book theBook, Client theClient);
+	void rentBook(Book theBook, Client theClient);
 	
-	public void deleteBook(int theId);
+	void deleteBook(int theId);
 
 	void returnBook(int theId);
 

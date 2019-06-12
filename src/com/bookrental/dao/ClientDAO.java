@@ -7,11 +7,11 @@ import com.bookrental.entity.Client;
 
 public interface ClientDAO {
 	
-	public List<Client> getClients();
+	List<Client> getClients();
 	
-	public void saveClient(Client theClient);
+	void saveClient(Client theClient);
 	
-	public Client getClient(int theId);
+	Client getClient(int theId);
 
 	void deleteClient(int theId);
 

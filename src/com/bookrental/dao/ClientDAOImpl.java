@@ -22,7 +22,7 @@ public class ClientDAOImpl implements ClientDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		List<Client> clients = (List<Client>) currentSession.createQuery("from Client").list();
+		List<Client> clients = currentSession.createQuery("from Client").list();
 		
 		return clients;
 	}
@@ -66,7 +66,6 @@ public class ClientDAOImpl implements ClientDAO {
 		
 		Query myQuery = currentSession.createQuery("select idBook from Book where client_id= :clinetId");
 		myQuery.setParameter("clinetId", theId);
-		//myQuery.executeUpdate();
 		
 		List<Object[]> resultList = myQuery.getResultList();
 		
@@ -75,10 +74,6 @@ public class ClientDAOImpl implements ClientDAO {
 		}
 		else {
 			return true;
-		}
-		
-		
-	        
+		}	        
 	 }
-
 }
