@@ -76,11 +76,16 @@ public class BookController {
 	}
 	
 	@PostMapping("/updateBook")
-	public String updateBook(@ModelAttribute("book") Book theBook) {
+	public String updateBook(@Valid @ModelAttribute("book") Book theBook, BindingResult theBindingResult) {
 		
-		bookService.updateBook(theBook.getIdBook(), theBook.getAuthor(), theBook.getTitle(), theBook.getGenre(), theBook.getRentalDate(), theBook.getReturnDate());
-		
-		return "redirect:/book/list-books";
+		if(theBindingResult.hasErrors())
+		{
+			return "book-form-update"; 
+		}
+		else {
+			bookService.updateBook(theBook.getIdBook(), theBook.getAuthor(), theBook.getTitle(), theBook.getGenre(), theBook.getRentalDate(), theBook.getReturnDate());
+			return "redirect:/book/list-books";
+		}
 	}
 	
 	

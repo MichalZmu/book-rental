@@ -29,11 +29,11 @@
 					
             <div class="form-group">
 				<label>Title:</label>
-				<form:input class="form-control" path="title" />
+				<form:input class="form-control" path="title" /> <form:errors path="title" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<label>Author:</label>
-				<form:input class="form-control" path="author" />
+				<form:input class="form-control" path="author" /> <form:errors path="author" cssClass="error" />
 			</div>
 				<div class="form-group">
 				<label>Genre:</label>
