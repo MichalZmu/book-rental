@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
 	<title>Library System</title>
 	
 	<link type="text/css" rel="stylesheet" 

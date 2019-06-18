@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
 	<title>Save Client</title>
 	
 	<link type="text/css" rel="stylesheet" 

@@ -6,6 +6,7 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
 	<title>Rent a book</title>
 	
 	<link type="text/css" rel="stylesheet" 
