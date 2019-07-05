@@ -1,9 +1,6 @@
 package com.bookrental.dao;
 
-import java.time.LocalDate;
 import java.util.List;
-
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -2,7 +2,6 @@ package com.bookrental.dao;
 
 import java.util.List;
 
-import com.bookrental.entity.Book;
 import com.bookrental.entity.Client;
 
 public interface ClientDAO {

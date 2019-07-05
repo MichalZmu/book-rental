@@ -1,6 +1,5 @@
 package com.bookrental.service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import com.bookrental.entity.Book;

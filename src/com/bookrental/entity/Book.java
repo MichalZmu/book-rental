@@ -1,10 +1,5 @@
 package com.bookrental.entity;
 
-import java.io.Serializable;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.RetentionPolicy;
-import java.sql.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

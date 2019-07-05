@@ -1,6 +1,5 @@
 package com.bookrental.dao;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import com.bookrental.entity.Book;
