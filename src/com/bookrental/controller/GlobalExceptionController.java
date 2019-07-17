@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bookrental.exception.CustomGenericException;
-import com.bookrental.exception.ResourceNotFoundException;
-
 @ControllerAdvice
 public class GlobalExceptionController {
 	
