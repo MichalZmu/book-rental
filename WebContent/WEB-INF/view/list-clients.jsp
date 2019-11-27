@@ -22,7 +22,7 @@
 		    </div>	
 		        <ul class="list-unstyled components">
 		            <li>
-		                <a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Book</a>
+		                <a href="#bookSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Books</a>
 		                <ul class="collapse list-unstyled" id="bookSubmenu">
 		                    <li>
 		                        <a href="/book-rental/book/list-books">All books</a>
