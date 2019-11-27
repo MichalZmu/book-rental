@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h2>CRM - Customer Relationship Manager</h2>
+			<h2>CRM Library</h2>
 		</div>
 	
 	    <div class="row">

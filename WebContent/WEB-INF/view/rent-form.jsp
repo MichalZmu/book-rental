@@ -20,7 +20,7 @@
 
 	<div class="container">
 		<div class="row">
-			<h2>CRM - Rent Form</h2>
+			<h2>Rent Form</h2>
 		</div>
 	<div class="row">
 		
